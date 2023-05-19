@@ -90,7 +90,9 @@ body {
   position: relative;
   cursor: pointer;
 }
-
+.navigation-list__item--active{
+  color: var(--clr-accent-100);
+}
 .main-navigation a:before,
 .main-navigation a:after {
   position: absolute;
@@ -211,12 +213,12 @@ th {
 .profile__items {
   display: flex;
   align-items: center;
-  padding: 50px;
+  margin: 50px;
   max-width: 900px;
 }
 
 .profile__portrait {
-  width: 300px;
+  width: 350px;
   height: auto;
   margin-right: 40px;
   border-radius: 50%;
@@ -232,7 +234,34 @@ th {
 }
 
 #code__link{
+  font-weight: var(--fw-medium);
+  position: relative;
+  
+  }
+  
+  #code__link::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 4px;
+      background-color: var(--clr-neutral-500);
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .5s ease-in-out;
+    }
+  
+    #code__link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+
+#web {
   color: var(--clr-accent-100);
+  font-weight: var(--fw-medium);
 }
 /* Contact */
 
