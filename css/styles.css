@@ -337,6 +337,9 @@ td {
 .main__contact--items > h1:first-child {
   grid-column: span 2;
 }
+.main__contact--item{
+  padding: 0 20px;
+}
 
 .input-field {
   width: 100%;
@@ -346,7 +349,9 @@ td {
 }
 
 /* Work */
-
+#work {
+  justify-content: normal;
+}
 .project {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
